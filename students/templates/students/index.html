@@ -44,73 +44,27 @@
                                         <table class="table table-hover">
                                             <thead>
                                               <tr>
-                                                <th scope="col">Type</th>
-                                                <th scope="col">Column heading</th>
-                                                <th scope="col">Column heading</th>
-                                                <th scope="col">Column heading</th>
+                                                <th scope="col">Student Number</th>
+                                                <th scope="col">First Name</th>
+                                                <th scope="col">Last Name</th>
+                                                <th scope="col">Email</th>
+                                                <th scope="col">Field of Study</th>
+                                                <th scope="col">GPA</th>
+                                                <th scope="col">Actions</th>
                                               </tr>
                                             </thead>
                                             <tbody>
-                                              <tr class="table-active">
-                                                <th scope="row">Active</th>
-                                                <td>Column content</td>
-                                                <td>Column content</td>
-                                                <td>Column content</td>
-                                              </tr>
+                                            {% for student in students %}
                                               <tr>
-                                                <th scope="row">Default</th>
-                                                <td>Column content</td>
-                                                <td>Column content</td>
-                                                <td>Column content</td>
+                                                <td>{{ student.student_number }}</td>
+                                                <td>{{ student.first_name }}</td>
+                                                <td>{{ student.last_name }}</td>
+                                                <td>{{ student.email }}</td>
+                                                <td>{{ student.field_of_study }}</td>
+                                                <td>{{ student.gpa }}</td>
+                                                <td>ACTIONS</td>
                                               </tr>
-                                              <tr class="table-primary">
-                                                <th scope="row">Primary</th>
-                                                <td>Column content</td>
-                                                <td>Column content</td>
-                                                <td>Column content</td>
-                                              </tr>
-                                              <tr class="table-secondary">
-                                                <th scope="row">Secondary</th>
-                                                <td>Column content</td>
-                                                <td>Column content</td>
-                                                <td>Column content</td>
-                                              </tr>
-                                              <tr class="table-success">
-                                                <th scope="row">Success</th>
-                                                <td>Column content</td>
-                                                <td>Column content</td>
-                                                <td>Column content</td>
-                                              </tr>
-                                              <tr class="table-danger">
-                                                <th scope="row">Danger</th>
-                                                <td>Column content</td>
-                                                <td>Column content</td>
-                                                <td>Column content</td>
-                                              </tr>
-                                              <tr class="table-warning">
-                                                <th scope="row">Warning</th>
-                                                <td>Column content</td>
-                                                <td>Column content</td>
-                                                <td>Column content</td>
-                                              </tr>
-                                              <tr class="table-info">
-                                                <th scope="row">Info</th>
-                                                <td>Column content</td>
-                                                <td>Column content</td>
-                                                <td>Column content</td>
-                                              </tr>
-                                              <tr class="table-light">
-                                                <th scope="row">Light</th>
-                                                <td>Column content</td>
-                                                <td>Column content</td>
-                                                <td>Column content</td>
-                                              </tr>
-                                              <tr class="table-dark">
-                                                <th scope="row">Dark</th>
-                                                <td>Column content</td>
-                                                <td>Column content</td>
-                                                <td>Column content</td>
-                                              </tr>
+                                            {% endfor %}
                                             </tbody>
                                           </table>
                                     </div>
