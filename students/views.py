@@ -51,7 +51,7 @@ def edit(request, id):
         form = StudentForm(request.POST, instance=student)
         if form.is_valid():
             form.save()
-            return render(reqeust, 'students/edit.html', {
+            return render(request, 'students/edit.html', {
                 'form':form,
                 'success': True 
             })
